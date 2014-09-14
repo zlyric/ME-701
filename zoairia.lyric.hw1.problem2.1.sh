@@ -6,6 +6,8 @@ read F
 #echo "The converted temperature in degrees Celsius is : $C";
 C=$(echo "scale=3; (($F-32)*5)/9" | bc); # to get floating point
 echo "The converted temperature in Celsius is : $C";
+K=$(echo "$C+273.15" | bc);
+echo "The converted temperature in Kelvin is : $K";
 exit
 fi
 
